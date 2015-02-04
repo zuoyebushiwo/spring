@@ -36,14 +36,20 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+
+import javax.servlet.AsyncContext;
+import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import org.springframework.util.Assert;
 import org.springframework.util.LinkedCaseInsensitiveMap;
@@ -912,6 +918,79 @@ public class MockHttpServletRequest implements HttpServletRequest {
 		this.userPrincipal = null;
 		this.remoteUser = null;
 		this.authType = null;
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#startAsync()
+	 */
+	@Override
+	public AsyncContext startAsync() throws IllegalStateException {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#startAsync(javax.servlet.ServletRequest, javax.servlet.ServletResponse)
+	 */
+	@Override
+	public AsyncContext startAsync(ServletRequest servletRequest,
+			ServletResponse servletResponse) throws IllegalStateException {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#isAsyncStarted()
+	 */
+	@Override
+	public boolean isAsyncStarted() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#isAsyncSupported()
+	 */
+	@Override
+	public boolean isAsyncSupported() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#getAsyncContext()
+	 */
+	@Override
+	public AsyncContext getAsyncContext() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.ServletRequest#getDispatcherType()
+	 */
+	@Override
+	public DispatcherType getDispatcherType() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServletRequest#getParts()
+	 */
+	@Override
+	public Collection<Part> getParts() throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
+	}
+
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServletRequest#getPart(java.lang.String)
+	 */
+	@Override
+	public Part getPart(String name) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Auto-generated method stub");
 	}
 
 }
